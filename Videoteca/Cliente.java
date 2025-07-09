@@ -1,0 +1,31 @@
+import java.util.*;
+
+class Cliente {
+    // dichiara gli attributi della classe
+    private int id;
+    private String nome;
+    private List<Film> filmNoleggiati;
+
+    public Cliente(int id, String nome) {
+        this.id = id;
+        this.nome = nome;
+        this.filmNoleggiati = new ArrayList<>();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void noleggiaFilm(Film film) {
+        filmNoleggiati.add(film);
+    }
+
+    public boolean restituisciFilm(int idFilm) {
+        return filmNoleggiati.removeIf(f -> f.getId() == idFilm);
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{id=" + id + ", nome='" + nome + "', filmNoleggiati=" + filmNoleggiati + "}";
+    }
+}
