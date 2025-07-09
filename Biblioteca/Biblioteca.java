@@ -1,8 +1,13 @@
-import java.util.ArrayList;
+import java.util.*;
 
 public class Biblioteca {
-    private ArrayList<Libro> libriDisponibili = new ArrayList<>();
-    private ArrayList<Utente> utenti = new ArrayList<>();
+    private List<Libro> libriDisponibili;
+    private List<Utente> utenti;
+
+    Biblioteca() {
+        this.libriDisponibili = new ArrayList<Libro>();
+        this.utenti = new ArrayList<Utente>();
+    }
 
     public void aggiungiLibro(Libro libro) {
         libriDisponibili.add(libro);

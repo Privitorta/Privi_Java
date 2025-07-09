@@ -1,4 +1,4 @@
-class Disco {
+public class Disco {
     private int id;
     private String titolo;
     private String artista;

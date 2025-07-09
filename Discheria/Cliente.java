@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Cliente {
+public class Cliente {
     private int id;
     private String nome;
     private List<Disco> dischiPresi;
