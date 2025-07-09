@@ -66,5 +66,6 @@ public class Solver {
                     break;
             }
         }
+        scanner.close();
     }
 }

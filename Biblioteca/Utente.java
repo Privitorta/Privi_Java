@@ -1,40 +1,39 @@
 import java.util.ArrayList;
-public class Utente{
-    private static int counter = 0;
 
+public class Utente {
     private int id;
     private String nome;
     private ArrayList<Libro> libriInPrestito = new ArrayList<>();
 
-    Utente(String nome){
-        counter++;
-        this.nome=nome;
-        this.id = counter;
+    public Utente(int id, String nome) {
+        this.id = id;
+        this.nome = nome;
     }
 
-    public void addLibro(Libro libro){
+    public int getId() {
+        return id;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void addLibro(Libro libro) {
         libriInPrestito.add(libro);
     }
-    public int getNprestiti(){
-        return libriInPrestito.size();
-    }
-    public Libro removeLibro(int idLibro){
-        Libro ritorno;
-        for(int i=0;i<libriInPrestito.size();i++){
-            if(idLibro == libriInPrestito.get(i).getId()){
-                ritorno = libriInPrestito.get(i);
-                libriInPrestito.remove(i);
-                return ritorno;
+
+    public Libro removeLibro(int idLibro) {
+        for (Libro libro : libriInPrestito) {
+            if (libro.getId() == idLibro) {
+                libriInPrestito.remove(libro);
+                return libro;
             }
         }
         return null;
     }
-    public int getId(){
-        return this.id;
-    }
 
-    public String toString(){
-        return this.id+ ": "+this.nome;
+    @Override
+    public String toString() {
+        return "Utente [" + id + "] " + nome;
     }
-    
 }
