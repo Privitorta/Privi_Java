@@ -7,8 +7,8 @@ public class Solver {
 
         System.out.println("Benvenuto nella Discheria");
         System.out.println("Comandi disponibili:");
-        System.out.println("* ADDDISCO <id>,<titolo>,<artista>");
-        System.out.println("* ADDCLIENTE <id>,<nome>");
+        System.out.println("* ADD-DISCO <id>,<titolo>,<artista>");
+        System.out.println("* ADD-CLIENTE <id>,<nome>");
         System.out.println("* PRENDI <idDisco>,<idCliente>");
         System.out.println("* RESTITUISCI <idDisco>,<idCliente>");
         System.out.println("* END (per terminare)");
@@ -18,7 +18,7 @@ public class Solver {
             String[] parti = input.split(" ", 2);
             String comando = parti[0];
             switch (comando) {
-                case "ADDDISCO":
+                case "ADD-DISCO":
                     String[] discoDettagli = parti[1].split(",");
                     int idDisco = Integer.parseInt(discoDettagli[0].trim());
                     String titolo = discoDettagli[1].trim();
@@ -27,7 +27,7 @@ public class Solver {
                     System.out.println("Disco aggiunto: " + titolo + " (" + artista + ")");
                     break;
 
-                case "ADDCLIENTE":
+                case "ADD-CLIENTE":
                     String[] clienteDettagli = parti[1].split(",");
                     int idCliente = Integer.parseInt(clienteDettagli[0].trim());
                     String nome = clienteDettagli[1].trim();

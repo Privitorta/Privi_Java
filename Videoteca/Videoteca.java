@@ -16,12 +16,12 @@ import java.util.*;
     // - restituisciFilm(int idFilm, int idCliente)
         // permette al cliente di restituire un film noleggiato precedentemente
 
-class Videoteca {
-
+public class Videoteca {
     // attributi richiesti
     private List<Film> catalogoFilm;
     private List<Cliente> clienti;
-    // costruttore:ogni volta che creo un oggetto Videoteca, eseguirà il costruttore e partirà con due liste vuote
+    
+    // costruttore: ogni volta che creo un oggetto Videoteca, eseguirà il costruttore e partirà con due liste vuote
     public Videoteca() {
         this.catalogoFilm = new ArrayList<>(); // lista film vuota
         this.clienti = new ArrayList<>(); // lista clienti vuota
