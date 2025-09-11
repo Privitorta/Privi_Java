@@ -18,6 +18,7 @@ public class Cliente {
     public void noleggiaFilm(Film film) {
         filmNoleggiati.add(film);
     }
+    
     public boolean restituisciFilm(int idFilm) {
         return filmNoleggiati.removeIf(f -> f.getId() == idFilm);
     }

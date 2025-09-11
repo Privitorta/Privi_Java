@@ -14,6 +14,7 @@ public class Film {
     public int getId() {
         return id;
     }
+    
     public String getTitolo() {
         return titolo;
     }
@@ -23,12 +24,15 @@ public class Film {
     }
 
     // gestione copie
+
     public int getCopie() {
         return copie;
     }
+
     public void incrementaCopie() {
         copie++;
     }
+
     public void decrementaCopie() {
         if (copie > 0) {
             copie--;

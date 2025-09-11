@@ -18,7 +18,7 @@ import java.util.*;
 
 public class Videoteca {
     // attributi richiesti
-    private List<Film> catalogoFilm;
+    private List<Film> catalogoFilm; 
     private List<Cliente> clienti;
     
     // costruttore: ogni volta che creo un oggetto Videoteca, eseguirà il costruttore e partirà con due liste vuote
@@ -31,9 +31,11 @@ public class Videoteca {
     public void aggiungiFilm(Film film){
         catalogoFilm.add(film);
     }
+
     public void registraCliente(Cliente cliente){
         clienti.add(cliente);
     }
+
     public boolean noleggiaFilm(int idFilm, int idCliente){
         Film film = null;
         for (Film f : catalogoFilm){
@@ -54,6 +56,7 @@ public class Videoteca {
         cliente.noleggiaFilm(film);
         return true;
     }
+
     public boolean restituisciFilm(int idFilm, int idCliente){
         Cliente cliente = null;
         for(Cliente c : clienti){
