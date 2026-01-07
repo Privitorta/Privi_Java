@@ -6,13 +6,13 @@ public class Solver {
         Macchinetta macchinetta = new Macchinetta();
         int soldi = 0;
         
-        System.out.println("F: termina l'esecuzione");
         System.out.println("B: aggiunge una bevanda alla macchinetta (nome, costo, volume)");
         System.out.println("M: aggiunge una merendina alla macchinetta (nome, costo, calorie)");
         System.out.println("S: aggiunge soldi alla macchinetta (soldi)");
         System.out.println("CB: compra una bevanda (volume)");
         System.out.println("CM: compra una merendina (calorie)");
         System.out.println("SORT: mostra i prodotti ordinati per costo");
+        System.out.println("F: termina l'esecuzione");
 
         while (true) {
             System.out.print("\nInserisci comando: ");
@@ -41,7 +41,7 @@ public class Solver {
                 case "S": {
                     int s = scanner.nextInt();
                     if (s < 0) {
-                        throw new RuntimeException("Soldi negativi");
+                        // throw new RuntimeException("Soldi negativi");
                     } else {
                         soldi += s;
                         System.out.println("Soldi attuali: " + soldi);
