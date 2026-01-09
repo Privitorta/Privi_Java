@@ -40,12 +40,14 @@ public class Macchinetta {
     public void stampaProdottiOrdinatiPerCosto() {
         System.out.println("Prodotti disponibili (ordinati per costo):");
         List<Prodotto> ordinati = new ArrayList<>(prodotti);
+
         Collections.sort(ordinati, new Comparator<Prodotto>() {
             @Override
             public int compare(Prodotto p1, Prodotto p2) {
                 return Integer.compare(p1.getCosto(), p2.getCosto());
             }
         });
+
         for (Prodotto p : ordinati) {
             System.out.println(p.getNome() + " - " + p.getCosto());
         }

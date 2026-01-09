@@ -80,5 +80,5 @@ public class Solver {
 
             System.out.println("Soldi disponibili: " + soldi);
         }
-    }
+    } 
 }
