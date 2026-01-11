@@ -4,7 +4,7 @@ public class Noleggio {
     private List<Veicolo> listaVeicoli;
 
     public Noleggio() {
-        listaVeicoli = new ArrayList<>();
+        this.listaVeicoli = new ArrayList<>();
     }
 
     public void aggiungiVeicolo(Veicolo v) {
@@ -58,5 +58,4 @@ public class Noleggio {
         });
         this.stampaVeicoli();
     }
-
 }
