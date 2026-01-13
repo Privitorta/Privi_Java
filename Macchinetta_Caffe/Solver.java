@@ -22,6 +22,7 @@ public class Solver {
                 case "F":
                     System.out.println("Terminazione programma");
                     System.exit(0);
+
                 case "B": {
                     String nome = scanner.next();
                     int costo = scanner.nextInt();
@@ -30,6 +31,7 @@ public class Solver {
                     System.out.println("Bevanda aggiunta");
                     break;
                 }
+
                 case "M": {
                     String nome = scanner.next();
                     int costo = scanner.nextInt();
@@ -38,16 +40,18 @@ public class Solver {
                     System.out.println("Merendina aggiunta");
                     break;
                 }
+
                 case "S": {
                     int s = scanner.nextInt();
                     if (s < 0) {
-                        // throw new RuntimeException("Soldi negativi");
+                        throw new RuntimeException("Soldi negativi");
                     } else {
                         soldi += s;
                         System.out.println("Soldi attuali: " + soldi);
                     }
                     break;
                 }
+
                 case "CB": {
                     int volume = scanner.nextInt();
                     Bevanda b = macchinetta.compraBevanda(soldi, volume);
@@ -59,6 +63,7 @@ public class Solver {
                     }
                     break;
                 }
+
                 case "CM": {
                     int calorie = scanner.nextInt();
                     Merendina m = macchinetta.compraMerendina(soldi, calorie);
@@ -70,10 +75,12 @@ public class Solver {
                     }
                     break;
                 }
+
                 case "SORT": {
                     macchinetta.stampaProdottiOrdinatiPerCosto();
                     break;
                 }
+
                 default:
                     System.out.println("Comando non valido");
             }

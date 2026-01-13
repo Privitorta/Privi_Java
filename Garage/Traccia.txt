@@ -1,0 +1,39 @@
+Classe Auto: rappresenta un'auto.
+• Attributi:
+	o String modello: il modello dell'auto.
+	o int targa: la targa dell'auto. E’ univoca per auto. Altrimenti detto, due auto devono avere targhe diverse.
+
+Classe Garage: rappresenta un garage in cui le persone possono parcheggiare le proprie auto.
+• Attributi:
+	o ArrayList<Auto> parcheggio: una lista che contiene le auto parcheggiate nel garage.
+• Metodi:
+	o public int aggiungiAuto(Auto auto)
+        aggiunge al garage l’auto
+	o public void rimuoviAuto(Auto auto)
+        rimuove un'auto dal garage, ovvero rimuove l’auto con la stessa targa della auto data in input alla funzione.
+	o public void visualizzaAuto()
+        stampa tutte le auto parcheggiate nel garage.
+
+Classe Persona: rappresenta una persona che possiede un'auto.
+• Attributi:
+	o String nome: il nome della persona.
+	o Auto auto: l'auto posseduta dalla persona.
+• Metodi:
+	o public void parcheggia(Garage garage)
+        permette alla persona di parcheggiare la propria auto nel garage.
+	o public void rimuoviAuto(Garage garage)
+        permette alla persona di rimuovere la propria auto dal garage.
+
+Scrivete una funzione main che crea N persone 
+(N è un valore chiesto all’utente come prima azione del main). 
+Per ogni persona, il programma chiede di inserire il modello della sua auto, 
+e assegna a ogni auto una targa univoca, ovvero un valore intero a tre cifre 
+(cominciate con la prima auto che avrà valore 100).
+A questo punto, il main da la possibilità a ogni utente di scegliere, 
+tramite un menù a tendina, chi entra nel garage e chi esce dal garage.
+
+Per la precisione; i comandi:
+“E nome”
+“U nome”
+Indicano una persona che entra (E) o esce (U) dal garage
+Il programma termina quando il comando inserito è “F”
