@@ -1,6 +1,6 @@
 ## Privi_Java
 
-Esercizi di programmazione in Java tratti da tracce d'esame di Programmazione (Laboratorio), A.A. 2024/25, prof. Matteo Luperto (UNIMI, SSRI)
+Esercizi di programmazione universitari in Java.
 
 ### Compilazione
 
