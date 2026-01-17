@@ -1,5 +1,7 @@
 import java.util.*;
 
+// ho messo i colori al Solver ma sono ovviamente facoltativi.
+
 public class Solver {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
