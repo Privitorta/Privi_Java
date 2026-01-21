@@ -39,6 +39,4 @@ public class GiocoDaTavolo {
             System.out.println(g.getNome() + " ha lanciato il dado e ottenuto " + lancio + ". Nuova posizione: " + g.getPosizione());
         }
     }
-
 }
-
